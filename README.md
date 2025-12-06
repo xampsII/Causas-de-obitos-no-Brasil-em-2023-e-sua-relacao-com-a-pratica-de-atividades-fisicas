@@ -18,7 +18,7 @@ Todo o processo, da limpeza dos dados às visualizações e insights, está docu
    ```bash
    !pip install pandas matplotlib seaborn numpy
 
-   📥 Download dos Dados
+📥 Download dos Dados
 
 Os dados são públicos, mas muito grandes para serem armazenados no GitHub.
 Baixe diretamente das fontes oficiais:
