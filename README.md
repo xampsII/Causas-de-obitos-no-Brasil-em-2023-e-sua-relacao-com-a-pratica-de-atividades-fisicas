@@ -1,101 +1,179 @@
-# 🩺 Análise Integrada: VIGITEL 2023 e SIM 2023  
-### Estudo sobre atividades físicas, pressão alta e causas de óbito no Brasil
+# 🧠📊 Análise Integrada: VIGITEL 2023 e SIM 2023  
+### Atividade Física, Hipertensão e Padrões de Mortalidade no Brasil
 
-Este repositório contém dois estudos complementares utilizando bases oficiais de saúde brasileiras:
+Este repositório apresenta uma análise exploratória de duas bases fundamentais para a compreensão da saúde pública brasileira:
 
-- **VIGITEL 2023** → Comportamentos de saúde da população adulta  
-- **SIM 2023 (DO23OPEN)** → Causas de óbito no Brasil  
+- **VIGITEL 2023** → hábitos de saúde, prática de atividades físicas e prevalência de hipertensão na população adulta.  
+- **SIM 2023 (DO23OPEN)** → causas de óbitos no Brasil, classificadas por CID-10.
 
-O objetivo é entender padrões de atividade física, prevalência de hipertensão e como esses fatores dialogam com o perfil de mortalidade do país.
-
-Todo o processo, da limpeza dos dados às visualizações e insights, está documentado nos notebooks deste repositório.
+Nosso objetivo foi identificar padrões de comportamento relacionados à atividade física e saúde, e entender como esses padrões se refletem nas principais causas de mortalidade.
 
 ---
 
-## ▶️ Como Reproduzir
+## 🚀 Como Utilizar Este Repositório
 
-1. **Instale as dependências**
+1. **Baixe os arquivos originais das bases de dados:**
+   - **VIGITEL 2023**  
+   👉 **https://docs.google.com/spreadsheets/d/1WOcw0-7bJJoBh84R0DwxjCEdS84WfKxQ/edit?usp=drive_link&ouid=117913188683628553800&rtpof=true&sd=true**
+   - **SIM 2023 – DO23OPEN.csv**  
+   👉 **[LINK SIM 2023]()**
+
+2. Coloque os arquivos na mesma pasta onde estão os notebooks.
+
+3. Instale as dependências:
    ```bash
-   !pip install pandas matplotlib seaborn numpy
+   pip install pandas matplotlib seaborn numpy
 
-📥 Download dos Dados
+Abra o notebook desejado:
 
-Os dados são públicos, mas muito grandes para serem armazenados no GitHub.
-Baixe diretamente das fontes oficiais:
+VIGITEL_2023.ipynb
 
-VIGITEL 2023
-Arquivo: Vigitel-2023-peso-rake.xlsx
-Link: (https://drive.google.com/file/d/10BB9hoax2bkMVmpkTTtOuesn3yNTo90T/view?usp=drive_link)
+SIM_2023.ipynb
 
-SIM 2023 – DO23OPEN.csv
-Arquivo: DO23OPEN.csv
-Link: (https://drive.google.com/file/d/1QTfJriBGu25cxXutjgyJr5run7Benh3x/view?usp=drive_link)
+Execute as células na ordem e acompanhe as análises explicadas nos próprios notebooks.
 
-📓 Notebooks e Conteúdo
-1️⃣ VIGITEL_2023.ipynb
+📝 O que Cada Notebook Faz
+📘 VIGITEL_2023.ipynb
 
-Contém:
+Este notebook realiza:
 
-Limpeza completa da base
+Limpeza completa dos dados
 
-Conversão de códigos em variáveis interpretáveis
+Conversão das variáveis codificadas (q6, q7, q8a, q25…)
 
-Criação de faixas etárias
+Construção de faixas etárias
 
-Mapeamento dos tipos de exercício
+Mapeamento de códigos de exercícios para nomes reais
 
-Análise:
+Criação de indicadores:
+
+prática de exercícios
+
+tipo de exercício
+
+presença de hipertensão
+
+Geração dos gráficos:
 
 prática de atividade física por idade
 
-distribuição dos tipos de exercício
+tipos de exercícios mais comuns
 
-hipertensão vs exercício
+comparação entre hipertensos e não hipertensos
 
-top exercícios entre pessoas hipertensas
+top exercícios entre hipertensos
 
-Inclui explicações metodológicas em Markdown.
+Tudo é explicado em markdown dentro do notebook com metodologia clara.
 
-2️⃣ SIM_2023.ipynb
+📘 SIM_2023.ipynb
 
-Contém:
+Este notebook contém:
 
-Cálculo de faixas etárias
+Limpeza e reorganização da base de óbitos
 
-Identificação dos CIDs mais comuns por faixa
+Criação de faixas etárias padronizadas
 
-Top 6 CIDs por faixa etária (gráfico empilhado)
+Identificação dos CIDs mais frequentes por idade
 
-Filtros por grupos de causa
+Ranking geral de causas
 
-Validação das tendências observadas
+Gráfico empilhado dos 6 CIDs mais prevalentes por faixa etária
 
-Também inclui descrições claras no notebook.
+Interpretação visual do perfil de mortalidade brasileiro
 
-📈 Principais Insights
-🔹 Do VIGITEL 2023:
+A análise conecta automaticamente idade → causa → padrão demográfico.
 
-Adultos mais jovens praticam mais atividade física regularmente.
+📊 Principais Insights da Análise
+🔹 1. Prática de Atividade Física (VIGITEL)
 
-Caminhada, musculação e corrida são os três tipos de exercício mais prevalentes.
+Jovens entre 20 e 39 anos são os que mais praticam exercícios.
 
-Pessoas com hipertensão ainda fazem atividade física, mas tendem mais a exercícios de baixo impacto (caminhada, alongamento, hidro).
+Comportamentos predominantes:
 
-Faixas acima de 50 anos apresentam maior proporção de hipertensos, independentemente da prática esportiva.
+caminhada
 
-🔹 Do SIM 2023:
+musculação
 
-As causas cardiovasculares são predominantes entre idosos.
+corrida
 
-Entre jovens adultos (20–39), predominam causas externas (acidentes, violência).
+A prática cai de forma consistente após os 50 anos.
 
-A partir dos 50 anos surgem com força doenças crônicas (cardíacas, respiratórias, metabólicas).
+🔹 2. Tipos de Exercícios por Idade
 
-A divisão etária por décadas evidencia mudanças bruscas no perfil de mortalidade.
+Jovens: corrida, musculação, esportes.
 
-Todos esses achados refletem e reforçam o relatório científico gerado no estudo.
+Meia-idade: caminhada, musculação moderada.
 
-📌 Observação
+Idosos: caminhada e exercícios de baixo impacto (alongamento, hidro).
 
-Este projeto foi produzido no contexto acadêmico e utiliza dados públicos.
-Sinta-se livre para reutilizar o código para fins de estudo ou extensão analítica.
+Isso revela uma transição natural em direção a exercícios menos intensos ao envelhecer.
+
+🔹 3. Hipertensão
+
+A prevalência cresce de forma acentuada a partir dos 50 anos.
+
+Hipertensos tendem a praticar:
+
+caminhada
+
+hidroginástica
+
+alongamento/pilates/ioga
+
+Quase não aparecem em categorias de exercícios de alta intensidade.
+
+Isso reforça um padrão preventivo ou restritivo típico de hipertensos.
+
+⚰️ Principais Achados sobre Mortalidade (SIM 2023)
+🔹 1. Jovens (10–39 anos)
+
+Predominam:
+
+causas externas
+
+acidentes
+
+agressões
+
+intervenções legais
+
+mortalidade por doenças é mínima
+
+🔹 2. Adultos (40–59 anos)
+
+Transição:
+
+aumento de causas cardíacas
+
+doenças metabólicas começam a aparecer
+
+causas externas ainda têm impacto
+
+🔹 3. Idosos (60+)
+
+Clareza absoluta:
+
+Doenças cardiovasculares são dominantes
+
+Doenças respiratórias crescem
+
+Complicações de diabetes e hipertensão aumentam fortemente
+
+É a fase onde a mortalidade por causas evitáveis se torna mais evidente.
+
+## 🧩 Conclusão
+
+A integração dos dados do VIGITEL e do SIM revela uma conexão direta entre comportamento, condição de saúde e mortalidade ao longo do ciclo de vida.
+
+- **Jovens** apresentam altos níveis de atividade física e baixa prevalência de doenças crônicas.  
+- **Adultos**, especialmente após os 40, começam a reduzir a prática de exercícios e a apresentar aumento significativo nos casos de hipertensão.  
+- **Idosos** concentram as maiores taxas de doenças cardiovasculares, metabólicas e respiratórias — refletindo padrões já observados nos hábitos e condições de saúde captados pelo VIGITEL.
+
+No cruzamento com o SIM, esses padrões se confirmam de forma contundente:  
+➡️ **A maior causa de morte no Brasil em 2023 foi o Infarto Agudo do Miocárdio (IAM).**
+
+Esse achado reforça a importância da prevenção, do controle da hipertensão e da manutenção da atividade física ao longo da vida, já que os mesmos fatores que aparecem como comportamentos de risco no VIGITEL se manifestam como causas reais de mortalidade no SIM.
+
+> **VIGITEL mostra o comportamento e os fatores de risco; SIM mostra o desfecho final.  
+Ambas as bases convergem para o papel central da saúde cardiovascular no contexto brasileiro.**
+
