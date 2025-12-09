@@ -16,7 +16,7 @@ Nosso objetivo foi identificar padrões de comportamento relacionados à ativida
    - **VIGITEL 2023**  
    👉 **https://docs.google.com/spreadsheets/d/1WOcw0-7bJJoBh84R0DwxjCEdS84WfKxQ/edit?usp=drive_link&ouid=117913188683628553800&rtpof=true&sd=true**
    - **SIM 2023 – DO23OPEN.csv**  
-   👉 **[LINK SIM 2023]()**
+   👉 **https://drive.google.com/file/d/1_9_tPF7-z__pTYBsJoZrpwKvrMOc84sU/view?usp=drive_link**
 
 2. Coloque os arquivos na mesma pasta onde estão os notebooks.
 
